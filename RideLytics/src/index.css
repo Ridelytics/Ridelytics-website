@@ -1,0 +1,26 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Urbanist:wght@400;500;600;700;800&display=swap');
+
+@theme {
+  --font-inter: 'Inter', sans-serif;
+  --font-urbanist: 'Urbanist', sans-serif;
+}
+
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: #141414;
+  font-family: var(--font-inter);
+}
+
+* {
+  box-sizing: border-box;
+}

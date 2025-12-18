@@ -10,7 +10,7 @@ function Hero() {
               <h1 
                 className="font-inter font-semibold text-[72px] leading-[80px] tracking-[-1.8px] bg-clip-text text-transparent mb-8"
                 style={{
-                  backgroundImage: 'linear-gradient(90deg, #C77DFF 0%, #E0AAFF 25%, #E0AAFF 50%, #C77DFF 75%, #9D4EDD 100%)',
+                  backgroundImage: 'radial-gradient(circle, #FFFFFF 0%, #888787 25%, #FFFFFF 50%, #888787 75%, #3B3B3B 100%)',
                   WebkitBackgroundClip: 'text',
                   WebkitTextFillColor: 'transparent',
                   paddingBottom: '4px',
@@ -26,34 +26,55 @@ function Hero() {
 
               {/* CTA Buttons */}
               <div className="flex gap-4 mb-28">
-                <button className="px-5 py-3.5 bg-gradient-to-b from-white/8 to-transparent border border-white/15 rounded-lg shadow-[0px_0px_5px_0px_rgba(233,30,255,0.05),0px_0px_15px_0px_rgba(233,30,255,0.15)] font-urbanist font-medium text-sm text-white hover:from-white/12 transition-all">
+                <button className="px-5 py-3.5 bg-gradient-to-b from-white/8 to-transparent border border-white/15 rounded-lg shadow-[0px_0px_5px_0px_rgba(255,255,255,0.05),0px_0px_15px_0px_rgba(200,200,200,0.15)] font-urbanist font-medium text-sm text-white hover:from-white/12 hover:shadow-[0px_0px_8px_0px_rgba(255,255,255,0.08),0px_0px_20px_0px_rgba(200,200,200,0.2)] transition-all">
                   Create Campaign
                 </button>
-                <button className="px-5 py-3.5 bg-gradient-to-b from-white/8 to-transparent border border-white/15 rounded-lg shadow-[0px_0px_5px_0px_rgba(233,30,255,0.05),0px_0px_15px_0px_rgba(233,30,255,0.15)] font-urbanist font-medium text-sm text-white hover:from-white/12 transition-all">
+                <button className="px-5 py-3.5 bg-gradient-to-b from-white/8 to-transparent border border-white/15 rounded-lg shadow-[0px_0px_5px_0px_rgba(255,255,255,0.05),0px_0px_15px_0px_rgba(200,200,200,0.15)] font-urbanist font-medium text-sm text-white hover:from-white/12 hover:shadow-[0px_0px_8px_0px_rgba(255,255,255,0.08),0px_0px_20px_0px_rgba(200,200,200,0.2)] transition-all">
                   View Dashboard
                 </button>
               </div>
 
               {/* Stats */}
               <div className="flex gap-4">
-                <div className="bg-[#1a1a1a] border border-[#262626] rounded-xl p-5 flex-1">
-                  <div className="font-urbanist font-bold text-[30px] leading-[45px] text-white mb-1">
+                <div className="bg-[#1a1a1a] border border-[#262626] rounded p-5 flex-1">
+                  <div 
+                    className="font-urbanist font-bold text-[30px] leading-[45px] bg-clip-text text-transparent mb-1"
+                    style={{
+                      backgroundImage: 'radial-gradient(circle, #FFFFFF 0%, #888787 25%, #FFFFFF 50%, #888787 75%, #3B3B3B 100%)',
+                      WebkitBackgroundClip: 'text',
+                      WebkitTextFillColor: 'transparent',
+                    }}
+                  >
                     250+
                   </div>
                   <div className="font-urbanist font-medium text-base text-[#999]">
                     Active Screens
                   </div>
                 </div>
-                <div className="bg-[#1a1a1a] border border-[#262626] rounded-xl p-5 flex-1">
-                  <div className="font-urbanist font-bold text-[30px] leading-[45px] text-white mb-1">
+                <div className="bg-[#1a1a1a] border border-[#262626] rounded p-5 flex-1">
+                  <div 
+                    className="font-urbanist font-bold text-[30px] leading-[45px] bg-clip-text text-transparent mb-1"
+                    style={{
+                      backgroundImage: 'radial-gradient(circle, #FFFFFF 0%, #888787 25%, #FFFFFF 50%, #888787 75%, #3B3B3B 100%)',
+                      WebkitBackgroundClip: 'text',
+                      WebkitTextFillColor: 'transparent',
+                    }}
+                  >
                     1.2M+
                   </div>
                   <div className="font-urbanist font-medium text-base text-[#999]">
                     Campaign Impressions
                   </div>
                 </div>
-                <div className="bg-[#1a1a1a] border border-[#262626] rounded-xl p-5 flex-1">
-                  <div className="font-urbanist font-bold text-[30px] leading-[45px] text-white mb-1">
+                <div className="bg-[#1a1a1a] border border-[#262626] rounded p-5 flex-1">
+                  <div 
+                    className="font-urbanist font-bold text-[30px] leading-[45px] bg-clip-text text-transparent mb-1"
+                    style={{
+                      backgroundImage: 'radial-gradient(circle, #FFFFFF 0%, #888787 25%, #FFFFFF 50%, #888787 75%, #3B3B3B 100%)',
+                      WebkitBackgroundClip: 'text',
+                      WebkitTextFillColor: 'transparent',
+                    }}
+                  >
                     98%
                   </div>
                   <div className="font-urbanist font-medium text-base text-[#999]">

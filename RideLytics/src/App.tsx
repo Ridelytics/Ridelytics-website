@@ -11,7 +11,7 @@ function App() {
       <Hero />
       <Features />
       <LogoCarousel />
-    </div>
+      </div>
   )
 }
 

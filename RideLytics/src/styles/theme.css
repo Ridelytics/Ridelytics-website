@@ -1,0 +1,78 @@
+/**
+ * RideLytics Design System - Theme Tokens
+ * 
+ * This file centralizes all color and styling decisions.
+ * To rebrand, update the HSL values here—no other file changes needed.
+ * 
+ * Colors extracted from existing design:
+ * - Background: #141414 (dark gray)
+ * - Card backgrounds: #1a1a1a
+ * - Borders: #262626
+ * - Text muted: #999999
+ * - White/Foreground: #ffffff
+ * - Accent (pink/magenta): #ff6bff
+ * - Silver gradient: radial-gradient with white/gray spectrum
+ */
+
+:root {
+  /* Base colors in HSL format (H S% L%) */
+  --color-background: 0 0% 8%;           /* #141414 - main dark background */
+  --color-foreground: 0 0% 100%;         /* #ffffff - white text */
+  
+  /* Card/surface colors */
+  --color-card: 0 0% 10%;                /* #1a1a1a - card backgrounds */
+  --color-card-foreground: 0 0% 100%;    /* #ffffff - text on cards */
+  
+  /* Muted/secondary colors */
+  --color-muted: 0 0% 60%;               /* #999999 - muted text */
+  --color-muted-foreground: 0 0% 60%;    /* #999999 - muted text variant */
+  
+  /* Border colors */
+  --color-border: 0 0% 15%;              /* #262626 - subtle borders */
+  
+  /* Primary accent (magenta/pink) */
+  --color-primary: 300 100% 71%;         /* #ff6bff - accent pink */
+  --color-primary-foreground: 0 0% 100%; /* #ffffff - text on primary */
+  
+  /* Accent colors (using same as primary for consistency) */
+  --color-accent: 300 100% 71%;          /* #ff6bff - accent pink */
+  --color-accent-foreground: 0 0% 100%;  /* #ffffff - text on accent */
+  
+  /* Button/overlay colors using white with opacity */
+  --color-overlay-subtle: 0 0% 100%;     /* white base for from-white/8 */
+  
+  /* Gray tones for silver gradients */
+  --color-gray-600: 0 0% 60%;            /* #999999 */
+  --color-gray-700: 0 0% 40%;            /* #666666 */
+  --color-gray-400: 0 0% 65%;            /* #a6a6a6 */
+  --color-gray-500: 0 0% 50%;            /* #808080 */
+  
+  /* Border radius tokens */
+  --radius-sm: 0.375rem;   /* 6px */
+  --radius-md: 0.5rem;     /* 8px */
+  --radius-lg: 0.75rem;    /* 12px */
+  --radius-xl: 0.75rem;    /* 12px - matches rounded-xl */
+  
+  /* Silver radial gradient (stored as CSS custom property for reuse) */
+  --gradient-silver: radial-gradient(circle, #FFFFFF 0%, #888787 25%, #FFFFFF 50%, #888787 75%, #3B3B3B 100%);
+  
+  /* Button gradient (white with opacity) */
+  --gradient-button: linear-gradient(to bottom, rgba(255, 255, 255, 0.08), transparent);
+  --gradient-button-hover: linear-gradient(to bottom, rgba(255, 255, 255, 0.12), transparent);
+}
+
+/* Dark mode (keeping same values as light since design is dark-first) */
+.dark {
+  --color-background: 0 0% 8%;
+  --color-foreground: 0 0% 100%;
+  --color-card: 0 0% 10%;
+  --color-card-foreground: 0 0% 100%;
+  --color-muted: 0 0% 60%;
+  --color-muted-foreground: 0 0% 60%;
+  --color-border: 0 0% 15%;
+  --color-primary: 300 100% 71%;
+  --color-primary-foreground: 0 0% 100%;
+  --color-accent: 300 100% 71%;
+  --color-accent-foreground: 0 0% 100%;
+}
+

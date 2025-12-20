@@ -49,7 +49,7 @@ function Features() {
           {features.map((feature, index) => (
             <div
               key={index}
-              className="bg-[#1a1a1a] border border-[#262626] rounded-xl p-5 relative group hover:border-[#ff6bff]/30 transition-all"
+              className="bg-card border border-border rounded-xl p-5 relative group hover:border-primary/30 transition-all"
             >
               {/* Info icon in top right */}
               <div className="absolute top-5 right-5 w-6 h-6 flex items-center justify-center">
@@ -62,22 +62,22 @@ function Features() {
               <div className="flex justify-center mb-6 mt-4">
                 <div className="relative w-[60px] h-[60px]">
                   {/* Outer circle */}
-                  <div className="absolute inset-0 rounded-full border border-[#ff6bff]" />
+                  <div className="absolute inset-0 rounded-full border border-primary" />
                   
                   {/* Inner circle */}
-                  <div className="absolute inset-2 rounded-full border border-[#ff6bff] flex items-center justify-center text-[#ff6bff]">
+                  <div className="absolute inset-2 rounded-full border border-primary flex items-center justify-center text-primary">
                     {feature.icon}
                   </div>
                 </div>
               </div>
 
               {/* Title */}
-              <h3 className="font-urbanist font-semibold text-base text-white text-center mb-3">
+              <h3 className="font-urbanist font-semibold text-base text-foreground text-center mb-3">
                 {feature.title}
               </h3>
 
               {/* Description */}
-              <p className="font-urbanist font-medium text-sm text-[#999] text-center leading-relaxed">
+              <p className="font-urbanist font-medium text-sm text-muted text-center leading-relaxed">
                 {feature.description}
               </p>
             </div>
@@ -89,4 +89,3 @@ function Features() {
 }
 
 export default Features
-

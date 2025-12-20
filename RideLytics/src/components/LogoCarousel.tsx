@@ -17,18 +17,11 @@ function LogoCarousel() {
   ]
 
   return (
-    <div className="relative px-4 py-16 overflow-hidden bg-[#141414]">
+    <div className="relative px-4 py-16 overflow-hidden bg-background">
       <div className="max-w-[1367px] mx-auto">
         {/* Title */}
         <div className="text-center mb-12">
-          <h2 
-            className="font-inter font-semibold text-[30px] leading-9 tracking-[-0.75px] bg-clip-text text-transparent"
-            style={{
-              backgroundImage: 'radial-gradient(circle, #FFFFFF 0%, #888787 25%, #FFFFFF 50%, #888787 75%, #3B3B3B 100%)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-            }}
-          >
+          <h2 className="section-subtitle">
             Advertising Businesses Around the World
           </h2>
         </div>
@@ -36,8 +29,8 @@ function LogoCarousel() {
         {/* Logo carousel container */}
         <div className="relative h-16 overflow-hidden">
           {/* Gradient overlays for fade effect */}
-          <div className="absolute left-0 top-0 bottom-0 w-1/3 bg-gradient-to-r from-[#141414] to-transparent z-10 pointer-events-none" />
-          <div className="absolute right-0 top-0 bottom-0 w-1/3 bg-gradient-to-l from-[#141414] to-transparent z-10 pointer-events-none" />
+          <div className="absolute left-0 top-0 bottom-0 w-1/3 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
+          <div className="absolute right-0 top-0 bottom-0 w-1/3 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
 
           {/* Scrolling logos */}
           <div className="flex animate-scroll">
@@ -98,4 +91,3 @@ function LogoCarousel() {
 }
 
 export default LogoCarousel
-

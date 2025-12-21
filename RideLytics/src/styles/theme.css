@@ -1,0 +1,86 @@
+/**
+ * RideLytics Design System - Theme Tokens
+ * 
+ * This file centralizes all color and styling decisions.
+ * To rebrand, update the HSL values here—no other file changes needed.
+ * 
+ * Colors extracted from Figma glassmorphism design:
+ * - Background: #000000 (pure black)
+ * - Card backgrounds: rgba(0,0,0,0.5) with backdrop blur
+ * - Borders: rgba(255,255,255,1) white with opacity
+ * - Text primary: rgba(255,255,255,1) white
+ * - Text secondary: rgba(255,255,255,0.7) white 70% opacity
+ * - Glass effect: backdrop-blur(10px)
+ */
+
+:root {
+  /* Base colors in HSL format (H S% L%) */
+  --color-background: 0 0% 0%;           /* #000000 - pure black background */
+  --color-foreground: 0 0% 100%;         /* #ffffff - white text */
+  
+  /* Card/surface colors - glassmorphism */
+  --color-card: 0 0% 0%;                 /* #000000 base for glass cards */
+  --color-card-glass: rgba(0, 0, 0, 0.5); /* translucent black */
+  --color-card-foreground: 0 0% 100%;    /* #ffffff - text on cards */
+  
+  /* Muted/secondary colors */
+  --color-muted: 0 0% 70%;               /* rgba(255,255,255,0.7) - muted text */
+  --color-muted-foreground: 0 0% 70%;    /* rgba(255,255,255,0.7) - muted text variant */
+  
+  /* Border colors - glass borders */
+  --color-border: 0 0% 100%;             /* #ffffff - white borders */
+  --color-border-glass: rgba(255, 255, 255, 0.21); /* translucent white border */
+  
+  /* Primary accent (magenta/pink) */
+  --color-primary: 300 100% 71%;         /* #ff6bff - accent pink */
+  --color-primary-foreground: 0 0% 100%; /* #ffffff - text on primary */
+  
+  /* Accent colors (using same as primary for consistency) */
+  --color-accent: 300 100% 71%;          /* #ff6bff - accent pink */
+  --color-accent-foreground: 0 0% 100%;  /* #ffffff - text on accent */
+  
+  /* Glass morphism values */
+  --glass-bg: rgba(0, 0, 0, 0.5);
+  --glass-border: rgba(255, 255, 255, 0.21);
+  --glass-blur: 10px;
+  
+  /* Gray tones for silver gradients */
+  --color-gray-600: 0 0% 60%;            /* #999999 */
+  --color-gray-700: 0 0% 40%;            /* #666666 */
+  --color-gray-400: 0 0% 65%;            /* #a6a6a6 */
+  --color-gray-500: 0 0% 50%;            /* #808080 */
+  
+  /* Border radius tokens */
+  --radius-sm: 0.375rem;   /* 6px */
+  --radius-md: 0.5rem;     /* 8px */
+  --radius-lg: 0.75rem;    /* 12px */
+  --radius-xl: 0.75rem;    /* 12px - matches rounded-xl */
+  --radius-card: 0.625rem; /* 10px - from Figma design */
+  
+  /* Silver radial gradient (stored as CSS custom property for reuse) */
+  --gradient-silver: radial-gradient(circle, #FFFFFF 0%, #888787 25%, #FFFFFF 50%, #888787 75%, #3B3B3B 100%);
+  
+  /* Button gradient (white with opacity) */
+  --gradient-button: linear-gradient(to bottom, rgba(255, 255, 255, 0.08), transparent);
+  --gradient-button-hover: linear-gradient(to bottom, rgba(255, 255, 255, 0.12), transparent);
+  
+  /* Glass gradient for avatar/buttons */
+  --gradient-glass: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.26));
+}
+
+/* Dark mode (keeping same values as light since design is dark-first) */
+.dark {
+  --color-background: 0 0% 0%;
+  --color-foreground: 0 0% 100%;
+  --color-card: 0 0% 0%;
+  --color-card-glass: rgba(0, 0, 0, 0.5);
+  --color-card-foreground: 0 0% 100%;
+  --color-muted: 0 0% 70%;
+  --color-muted-foreground: 0 0% 70%;
+  --color-border: 0 0% 100%;
+  --color-border-glass: rgba(255, 255, 255, 0.21);
+  --color-primary: 300 100% 71%;
+  --color-primary-foreground: 0 0% 100%;
+  --color-accent: 300 100% 71%;
+  --color-accent-foreground: 0 0% 100%;
+}

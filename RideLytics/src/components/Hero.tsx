@@ -1,3 +1,5 @@
+import rideLyticsLogo from '../assets/RideLytics Logo (1).png'
+
 function Hero() {
   return (
     <div className="relative pt-[100px] sm:pt-[126px] px-4 pb-16 overflow-hidden">
@@ -76,21 +78,13 @@ function Hero() {
             </div>
           </div>
 
-          {/* Right Abstract Design */}
-          <div className="relative w-full lg:w-[557px] h-[400px] lg:h-[622px] bg-card rounded-lg overflow-hidden flex-shrink-0 hidden lg:block">
-            {/* Abstract gradient background */}
-            <div className="absolute inset-0 opacity-30">
-              <div className="absolute inset-0 bg-gradient-to-br from-gray-600/40 via-gray-700/30 to-transparent" />
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(200,200,200,0.15),transparent_50%)]" />
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(160,160,160,0.15),transparent_50%)]" />
-            </div>
-            
-            {/* Animated gradient overlay */}
-            <div className="absolute inset-0 bg-gradient-to-l from-[#2a2a2a]/90 via-[#191919]/50 to-transparent" />
-            
-            {/* Decorative circles */}
-            <div className="absolute top-1/4 left-1/4 w-64 h-64 rounded-full bg-gray-400/5 blur-3xl animate-pulse" />
-            <div className="absolute bottom-1/4 right-1/4 w-64 h-64 rounded-full bg-gray-500/5 blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
+          {/* Right Logo */}
+          <div className="relative w-full lg:w-[613px] h-[400px] lg:h-[613px] flex-shrink-0 hidden lg:flex items-center justify-center">
+            <img 
+              src={rideLyticsLogo} 
+              alt="RideLytics Logo" 
+              className="w-full h-full object-contain"
+            />
           </div>
         </div>
       </div>

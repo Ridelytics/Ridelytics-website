@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -28,9 +29,11 @@ function Navigation() {
 
           {/* Desktop CTA Button */}
           <div className="hidden md:flex gap-3 flex-shrink-0">
-            <button className="btn-secondary whitespace-nowrap">
-              Account
-            </button>
+            <Link to="/login">
+              <button className="btn-secondary whitespace-nowrap">
+                Account
+              </button>
+            </Link>
           </div>
 
           {/* Hamburger Menu Button */}
@@ -83,9 +86,11 @@ function Navigation() {
 
             {/* Mobile CTA Button */}
             <div className="flex flex-col gap-3 pt-2 border-t border-white/10">
-              <button className="btn-secondary w-full">
-                Account
-              </button>
+              <Link to="/login" className="w-full">
+                <button className="btn-secondary w-full">
+                  Account
+                </button>
+              </Link>
             </div>
           </div>
         )}

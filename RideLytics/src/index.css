@@ -39,7 +39,7 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
-  background-color: #141414;
+  background-color: #000000;
   font-family: var(--font-inter);
   overflow-x: hidden;
 }
@@ -50,4 +50,20 @@ body {
 
 html {
   overflow-x: hidden;
+}
+
+/* Fade-in animation for cards */
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 1s var(--animation-delay, 0s) ease forwards;
 }

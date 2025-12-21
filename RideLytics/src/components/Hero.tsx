@@ -1,4 +1,4 @@
-import rideLyticsLogo from '../assets/RideLytics Logo (1).png'
+import rideLyticsLogo from '../assets/RideLytics Logo Grey.png'
 
 function Hero() {
   return (

@@ -21,16 +21,13 @@ function Navigation() {
             <a href="#drivers" className="nav-link">
               Drivers
             </a>
-            <a href="#about" className="nav-link">
-              About us
+            <a href="#features" className="nav-link">
+              Features
             </a>
           </div>
 
-          {/* Desktop CTA Buttons */}
+          {/* Desktop CTA Button */}
           <div className="hidden md:flex gap-3 flex-shrink-0">
-            <button className="btn-secondary whitespace-nowrap">
-              Contact us
-            </button>
             <button className="btn-secondary whitespace-nowrap">
               Account
             </button>
@@ -76,19 +73,16 @@ function Navigation() {
                 Drivers
               </a>
               <a 
-                href="#about" 
+                href="#features" 
                 className="nav-link block py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
-                About us
+                Features
               </a>
             </div>
 
-            {/* Mobile CTA Buttons */}
+            {/* Mobile CTA Button */}
             <div className="flex flex-col gap-3 pt-2 border-t border-white/10">
-              <button className="btn-secondary w-full">
-                Contact us
-              </button>
               <button className="btn-secondary w-full">
                 Account
               </button>

@@ -41,8 +41,13 @@ body {
   min-height: 100vh;
   background-color: #141414;
   font-family: var(--font-inter);
+  overflow-x: hidden;
 }
 
 * {
   box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
 }

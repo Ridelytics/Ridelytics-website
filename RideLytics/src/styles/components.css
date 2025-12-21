@@ -43,7 +43,7 @@
   
   /* Section title (large heading) */
   .section-title {
-    @apply font-inter font-semibold text-[72px] leading-[80px] tracking-[-1.8px];
+    @apply font-inter font-semibold text-[40px] sm:text-[56px] lg:text-[72px] leading-[48px] sm:leading-[64px] lg:leading-[80px] tracking-[-1.0px] sm:tracking-[-1.4px] lg:tracking-[-1.8px];
     @apply bg-clip-text text-transparent;
     background-image: var(--gradient-silver);
     -webkit-background-clip: text;
@@ -53,7 +53,7 @@
   
   /* Section subtitle (carousel heading) */
   .section-subtitle {
-    @apply font-inter font-semibold text-[30px] leading-9 tracking-[-0.75px];
+    @apply font-inter font-semibold text-[24px] sm:text-[28px] lg:text-[30px] leading-[32px] sm:leading-[36px] lg:leading-9 tracking-[-0.6px] sm:tracking-[-0.7px] lg:tracking-[-0.75px];
     @apply bg-clip-text text-transparent;
     background-image: var(--gradient-silver);
     -webkit-background-clip: text;

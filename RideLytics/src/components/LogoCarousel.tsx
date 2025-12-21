@@ -29,8 +29,8 @@ function LogoCarousel() {
         {/* Logo carousel container */}
         <div className="relative h-16 overflow-hidden">
           {/* Gradient overlays for fade effect */}
-          <div className="absolute left-0 top-0 bottom-0 w-1/3 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
-          <div className="absolute right-0 top-0 bottom-0 w-1/3 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
+          <div className="absolute left-0 top-0 bottom-0 w-1/4 sm:w-1/3 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
+          <div className="absolute right-0 top-0 bottom-0 w-1/4 sm:w-1/3 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
 
           {/* Scrolling logos */}
           <div className="flex animate-scroll">
@@ -38,8 +38,8 @@ function LogoCarousel() {
             {logos.map((logo, index) => (
               <div
                 key={`${logo.id}-1-${index}`}
-                className="flex-shrink-0 mx-8 flex items-center justify-center"
-                style={{ width: '170px', height: '64px' }}
+                className="flex-shrink-0 mx-4 sm:mx-6 lg:mx-8 flex items-center justify-center"
+                style={{ width: '120px', height: '64px' }}
               >
                 <logo.Component />
               </div>
@@ -48,8 +48,8 @@ function LogoCarousel() {
             {logos.map((logo, index) => (
               <div
                 key={`${logo.id}-2-${index}`}
-                className="flex-shrink-0 mx-8 flex items-center justify-center"
-                style={{ width: '170px', height: '64px' }}
+                className="flex-shrink-0 mx-4 sm:mx-6 lg:mx-8 flex items-center justify-center"
+                style={{ width: '120px', height: '64px' }}
               >
                 <logo.Component />
               </div>
@@ -58,8 +58,8 @@ function LogoCarousel() {
             {logos.map((logo, index) => (
               <div
                 key={`${logo.id}-3-${index}`}
-                className="flex-shrink-0 mx-8 flex items-center justify-center"
-                style={{ width: '170px', height: '64px' }}
+                className="flex-shrink-0 mx-4 sm:mx-6 lg:mx-8 flex items-center justify-center"
+                style={{ width: '120px', height: '64px' }}
               >
                 <logo.Component />
               </div>

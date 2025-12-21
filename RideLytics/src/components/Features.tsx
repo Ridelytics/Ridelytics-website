@@ -45,14 +45,14 @@ function Features() {
   return (
     <div className="relative px-4 py-16">
       <div className="max-w-[1365px] mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {features.map((feature, index) => (
             <div
               key={index}
-              className="bg-card border border-border rounded-xl p-5 relative group hover:border-primary/30 transition-all"
+              className="bg-card border border-border rounded-xl p-5 relative group hover:border-primary/30 transition-all min-w-0"
             >
               {/* Info icon in top right */}
-              <div className="absolute top-5 right-5 w-6 h-6 flex items-center justify-center">
+              <div className="absolute top-5 right-5 w-6 h-6 flex items-center justify-center flex-shrink-0">
                 <svg className="w-4 h-4 text-white/40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M12 16v-4M12 8h.01M22 12c0 5.523-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2s10 4.477 10 10z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
@@ -60,7 +60,7 @@ function Features() {
 
               {/* Icon container */}
               <div className="flex justify-center mb-6 mt-4">
-                <div className="relative w-[60px] h-[60px]">
+                <div className="relative w-[60px] h-[60px] flex-shrink-0">
                   {/* Outer circle */}
                   <div className="absolute inset-0 rounded-full border border-primary" />
                   
@@ -72,12 +72,12 @@ function Features() {
               </div>
 
               {/* Title */}
-              <h3 className="font-urbanist font-semibold text-base text-foreground text-center mb-3">
+              <h3 className="font-urbanist font-semibold text-base text-foreground text-center mb-3 break-words">
                 {feature.title}
               </h3>
 
               {/* Description */}
-              <p className="font-urbanist font-medium text-sm text-muted text-center leading-relaxed">
+              <p className="font-urbanist font-medium text-sm text-muted text-center leading-relaxed break-words">
                 {feature.description}
               </p>
             </div>

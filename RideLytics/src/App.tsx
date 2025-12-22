@@ -1,17 +1,26 @@
 import './App.css'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Navigation from './components/Navigation'
-import Hero from './components/Hero'
-import Features from './components/Features'
-import LogoCarousel from './components/LogoCarousel'
+import Footer from './components/Footer'
+import Home from './pages/Home'
+import Login from './pages/Login'
 
 function App() {
   return (
-    <div className="min-h-screen bg-[#141414] text-white">
-      <Navigation />
-      <Hero />
-      <Features />
-      <LogoCarousel />
+    <Router>
+      <div className="min-h-screen bg-[#141414] text-white">
+        <Routes>
+          <Route path="/" element={
+            <>
+              <Navigation />
+              <Home />
+              <Footer />
+            </>
+          } />
+          <Route path="/login" element={<Login />} />
+        </Routes>
       </div>
+    </Router>
   )
 }
 

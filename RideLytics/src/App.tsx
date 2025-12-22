@@ -4,6 +4,7 @@ import Navigation from './components/Navigation'
 import Footer from './components/Footer'
 import Home from './pages/Home'
 import Login from './pages/Login'
+import About from './pages/About'
 
 function App() {
   return (
@@ -14,6 +15,13 @@ function App() {
             <>
               <Navigation />
               <Home />
+              <Footer />
+            </>
+          } />
+          <Route path="/about" element={
+            <>
+              <Navigation />
+              <About />
               <Footer />
             </>
           } />

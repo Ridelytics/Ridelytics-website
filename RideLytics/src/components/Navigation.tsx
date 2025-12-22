@@ -10,21 +10,24 @@ function Navigation() {
         {/* Desktop Navigation */}
         <div className="h-[70px] flex items-center justify-between px-4 sm:px-6 lg:px-8">
           {/* Logo */}
-          <div className="font-inter font-medium text-sm text-foreground flex-shrink-0">
+          <Link to="/" className="font-inter font-medium text-sm text-foreground flex-shrink-0 hover:opacity-80 transition-opacity cursor-pointer">
             RideLytics
-          </div>
+          </Link>
 
           {/* Desktop Navigation Links */}
           <div className="hidden md:flex gap-8">
-            <a href="#advertisers" className="nav-link">
-              Advertisers
+            <a href="#businesses" className="nav-link">
+              Businesses
             </a>
             <a href="#drivers" className="nav-link">
               Drivers
             </a>
             <a href="#features" className="nav-link">
-              Features
+              Ad Solutions
             </a>
+            <Link to="/about" className="nav-link">
+              About us
+            </Link>
           </div>
 
           {/* Desktop CTA Button */}
@@ -62,11 +65,11 @@ function Navigation() {
             {/* Mobile Navigation Links */}
             <div className="flex flex-col space-y-3">
               <a 
-                href="#advertisers" 
+                href="#businesses" 
                 className="nav-link block py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Advertisers
+                Businesses
               </a>
               <a 
                 href="#drivers" 
@@ -80,8 +83,15 @@ function Navigation() {
                 className="nav-link block py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Features
+                Ad Solutions
               </a>
+              <Link 
+                to="/about" 
+                className="nav-link block py-2"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                About us
+              </Link>
             </div>
 
             {/* Mobile CTA Button */}

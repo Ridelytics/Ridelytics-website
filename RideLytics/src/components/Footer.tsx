@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 function Footer() {
   const [isQuickLinksOpen, setIsQuickLinksOpen] = useState(false)
@@ -37,14 +38,14 @@ function Footer() {
               </svg>
             </button>
             <nav className={`flex-col space-y-3 ${isQuickLinksOpen ? 'flex' : 'hidden'} md:flex`}>
-              <a href="#advertisers" className="text-sm text-muted hover:text-foreground transition-colors">
-                Advertisers
+              <a href="#businesses" className="text-sm text-muted hover:text-foreground transition-colors">
+                Businesses
               </a>
               <a href="#drivers" className="text-sm text-muted hover:text-foreground transition-colors">
                 Drivers
               </a>
               <a href="#features" className="text-sm text-muted hover:text-foreground transition-colors">
-                Features
+                Ad Solutions
               </a>
             </nav>
           </div>
@@ -74,12 +75,12 @@ function Footer() {
               >
                 Contact us
               </a>
-              <a 
-                href="#about" 
+              <Link 
+                to="/about" 
                 className="text-sm text-muted hover:text-foreground transition-colors"
               >
                 About us
-              </a>
+              </Link>
             </div>
           </div>
         </div>

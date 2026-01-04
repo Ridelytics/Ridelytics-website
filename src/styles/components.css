@@ -1,0 +1,465 @@
+/**
+ * RideLytics Design System - Component Styles
+ * 
+ * Reusable component classes extracted from existing patterns.
+ * Uses @layer components to ensure proper CSS cascade.
+ */
+
+@layer components {
+  /* Container for page sections */
+  .container-page {
+    @apply max-w-[1435px] mx-auto px-4;
+  }
+
+  /* Container for About page with larger margins */
+  .container-about {
+    @apply max-w-[1365px] mx-auto px-8 sm:px-12 lg:px-16;
+  }
+  
+  /* Glass morphism card (from Figma design) */
+  .glass-card {
+    @apply relative p-[30px] rounded-[10px] min-w-0;
+    @apply backdrop-blur-[10px];
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 
+      0px 3px 6px 0px rgba(0, 0, 0, 0.1),
+      0px 10px 20px 0px rgba(0, 0, 0, 0.1),
+      0px 15px 30px 0px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+  }
+  
+  .glass-card:hover {
+    border-color: rgba(255, 255, 255, 0.15);
+    box-shadow: 
+      0px 3px 6px 0px rgba(0, 0, 0, 0.15),
+      0px 10px 20px 0px rgba(0, 0, 0, 0.15),
+      0px 15px 30px 0px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Enhanced glass card with gradient border and animations */
+  .feature-card-glass {
+    @apply relative p-[30px] rounded-[10px] min-w-0;
+    @apply backdrop-blur-[10px];
+    background: rgba(0, 0, 0, 0.2);
+    box-shadow: 
+      0px 15px 30px 0px rgba(0, 0, 0, 0.15),
+      0px 10px 20px 0px rgba(0, 0, 0, 0.1),
+      0px 3px 6px 0px rgba(0, 0, 0, 0.1);
+    transition: all 0.5s ease;
+    opacity: 0;
+    transform: translateY(-1rem);
+    animation: fade-in 1s var(--animation-delay, 0s) ease forwards;
+  }
+  
+  /* Ultra-subtle gradient border effect using pseudo-element */
+  .feature-card-glass::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    padding: 1px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.05) 100%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    z-index: 1;
+    pointer-events: none;
+  }
+  
+  .feature-card-glass:hover {
+    transform: translateY(-4px);
+    background: rgba(0, 0, 0, 0.3);
+    box-shadow: 
+      0px 20px 40px 0px rgba(0, 0, 0, 0.2),
+      0px 15px 30px 0px rgba(0, 0, 0, 0.15),
+      0px 5px 10px 0px rgba(0, 0, 0, 0.1);
+  }
+  
+  .feature-card-glass:hover::before {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.08) 100%);
+  }
+  
+  /* Base card styling (used in stats, features) */
+  .card {
+    @apply bg-card border border-border rounded p-5;
+  }
+  
+  /* Card with hover effect (features) */
+  .card-hover {
+    @apply bg-card border border-border rounded-xl p-5 relative hover:border-primary/30 transition-all;
+  }
+  
+  /* Base button styling */
+  .btn {
+    @apply px-5 py-3.5 font-urbanist font-medium text-sm transition-all;
+  }
+  
+  /* Primary button with glass morphism effect */
+  .btn-primary {
+    @apply px-5 py-3.5 font-urbanist font-medium text-sm transition-all;
+    @apply bg-gradient-to-b from-white/8 to-transparent border border-white/15 rounded-lg text-white;
+    @apply shadow-[0px_0px_5px_0px_rgba(255,255,255,0.05),0px_0px_15px_0px_rgba(200,200,200,0.15)];
+    @apply hover:from-white/12 hover:shadow-[0px_0px_8px_0px_rgba(255,255,255,0.08),0px_0px_20px_0px_rgba(200,200,200,0.2)];
+  }
+  
+  /* Secondary button (smaller, for nav) */
+  .btn-secondary {
+    @apply px-3 py-1.5 bg-gradient-to-b from-white/8 to-transparent border border-white/15 rounded-md;
+    @apply shadow-[0px_0px_5px_0px_rgba(255,255,255,0.05),0px_0px_15px_0px_rgba(255,255,255,0.15)];
+    @apply font-inter font-medium text-xs text-white hover:from-white/12 transition-all;
+  }
+  
+  /* Section title (large heading) */
+  .section-title {
+    @apply font-inter font-semibold text-[40px] sm:text-[56px] lg:text-[72px] leading-[48px] sm:leading-[64px] lg:leading-[80px] tracking-[-1.0px] sm:tracking-[-1.4px] lg:tracking-[-1.8px];
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-silver);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding-bottom: 4px;
+  }
+  
+  /* Section subtitle (carousel heading) */
+  .section-subtitle {
+    @apply font-inter font-semibold text-[24px] sm:text-[28px] lg:text-[30px] leading-[32px] sm:leading-[36px] lg:leading-9 tracking-[-0.6px] sm:tracking-[-0.7px] lg:tracking-[-0.75px];
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-silver);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  /* Stat number with gradient */
+  .stat-number {
+    @apply font-urbanist font-bold text-[30px] leading-[45px] bg-clip-text text-transparent;
+    background-image: var(--gradient-silver);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  /* Stat label */
+  .stat-label {
+    @apply font-urbanist font-medium text-base text-muted;
+  }
+  
+  /* Navigation link */
+  .nav-link {
+    @apply font-inter font-medium text-sm text-white/80 hover:text-white transition-colors;
+  }
+
+  /* ============================================
+     ABOUT PAGE COMPONENTS
+     ============================================ */
+  
+  /* About page wrapper */
+  .about-page {
+    @apply relative pt-[100px] sm:pt-[126px] px-4 pb-16 overflow-hidden;
+  }
+  
+  /* Journey section */
+  .journey-section {
+    @apply flex flex-col lg:flex-row gap-8 lg:gap-[60px] items-center;
+  }
+  
+  .journey-content {
+    @apply flex-1 w-full lg:max-w-[610px];
+  }
+  
+  .journey-content-inner {
+    @apply space-y-6 py-8 sm:py-16 lg:py-24;
+  }
+  
+  .journey-description {
+    @apply font-urbanist font-medium text-base leading-6 text-muted max-w-[610px];
+  }
+  
+  /* Journey stats grid */
+  .journey-stats-grid {
+    @apply grid grid-cols-1 md:grid-cols-3 gap-4 pt-8;
+  }
+  
+  /* Journey stat card */
+  .journey-stat-card {
+    @apply relative bg-[#1a1a1a] rounded-[10px] h-[130px] w-full;
+  }
+  
+  .journey-stat-number {
+    @apply absolute left-[20px] top-[20px];
+  }
+  
+  .journey-stat-label {
+    @apply absolute left-[20px] bottom-[20px] right-[20px];
+  }
+  
+  .journey-stat-border {
+    @apply absolute border border-[#262626] border-solid h-[130px] left-0 rounded-[10px] top-0 w-full pointer-events-none;
+  }
+  
+  /* Journey hero image */
+  .journey-hero-image {
+    @apply relative w-full lg:w-[610px] h-[300px] lg:h-[435px] flex-shrink-0 overflow-hidden rounded-[10px];
+  }
+  
+  .journey-hero-img {
+    @apply w-full h-full object-cover opacity-60;
+  }
+  
+  .journey-hero-overlay {
+    @apply absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent pointer-events-none;
+  }
+  
+  /* Values section */
+  .values-section {
+    @apply w-full mb-8 lg:mb-12;
+  }
+  
+  .values-content {
+    @apply flex flex-col gap-12 py-8 sm:py-12 lg:py-16;
+  }
+  
+  .values-header {
+    @apply w-full px-8 sm:px-12 lg:px-16;
+  }
+  
+  .values-grid {
+    @apply grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 gap-[20px];
+  }
+  
+  /* Value card variants */
+  .value-card-stat {
+    @apply bg-[#1a1a1a] border border-[#262626] p-[30px] hover:border-[#333] transition-all min-h-[250px];
+    @apply relative overflow-visible;
+  }
+  
+  .value-card-stat::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 0;
+    filter: blur(50px);
+    opacity: 0;
+    transition: opacity 500ms;
+    pointer-events: none;
+    background: conic-gradient(from 180deg at 50% 50%, rgba(242,98,181,0) 0%, rgba(95,197,255,0.4) 15%, rgba(255,172,137,0.4) 30%, rgba(129,85,255,0.4) 45%, rgba(120,157,255,0.4) 60%, rgba(159,115,241,0.4) 75%, rgba(242,98,181,0) 100%);
+  }
+  
+  .value-card-stat:hover::before {
+    opacity: 0.6;
+  }
+  
+  .value-card-hero {
+    @apply p-[40px] flex flex-col justify-between relative overflow-hidden min-h-[250px];
+    background: linear-gradient(to bottom right, #FF3B30, #FF2D92, #8E2DE2);
+  }
+  
+  .value-card-feature {
+    @apply bg-[#1a1a1a] border border-[#262626] p-[30px] hover:border-[#333] transition-all min-h-[250px];
+    @apply flex flex-col justify-center relative overflow-visible;
+  }
+  
+  .value-card-feature::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 0;
+    filter: blur(50px);
+    opacity: 0;
+    transition: opacity 500ms;
+    pointer-events: none;
+    background: conic-gradient(from 180deg at 50% 50%, rgba(242,98,181,0) 0%, rgba(95,197,255,0.4) 15%, rgba(255,172,137,0.4) 30%, rgba(129,85,255,0.4) 45%, rgba(120,157,255,0.4) 60%, rgba(159,115,241,0.4) 75%, rgba(242,98,181,0) 100%);
+  }
+  
+  .value-card-feature:hover::before {
+    opacity: 0.6;
+  }
+  
+  .value-card-icon {
+    @apply bg-[#1a1a1a] border border-[#262626] p-[30px] hover:border-[#333] transition-all min-h-[250px];
+    @apply relative overflow-visible;
+  }
+  
+  .value-card-icon::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 0;
+    filter: blur(50px);
+    opacity: 0;
+    transition: opacity 500ms;
+    pointer-events: none;
+    background: conic-gradient(from 180deg at 50% 50%, rgba(242,98,181,0) 0%, rgba(95,197,255,0.4) 15%, rgba(255,172,137,0.4) 30%, rgba(129,85,255,0.4) 45%, rgba(120,157,255,0.4) 60%, rgba(159,115,241,0.4) 75%, rgba(242,98,181,0) 100%);
+  }
+  
+  .value-card-icon:hover::before {
+    opacity: 0.6;
+  }
+  
+  .value-card-text {
+    @apply bg-[#1a1a1a] border border-[#262626] p-[30px] hover:border-[#333] transition-all min-h-[250px];
+    @apply flex items-center relative overflow-visible;
+  }
+  
+  .value-card-text::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 0;
+    filter: blur(50px);
+    opacity: 0;
+    transition: opacity 500ms;
+    pointer-events: none;
+    background: conic-gradient(from 180deg at 50% 50%, rgba(242,98,181,0) 0%, rgba(95,197,255,0.4) 15%, rgba(255,172,137,0.4) 30%, rgba(129,85,255,0.4) 45%, rgba(120,157,255,0.4) 60%, rgba(159,115,241,0.4) 75%, rgba(242,98,181,0) 100%);
+  }
+  
+  .value-card-text:hover::before {
+    opacity: 0.6;
+  }
+  
+  .value-card-vertical {
+    @apply bg-[#1a1a1a] border border-[#262626] p-[30px] hover:border-[#333] transition-all min-h-[250px];
+    @apply flex flex-col justify-between relative overflow-visible;
+  }
+  
+  .value-card-vertical::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 0;
+    filter: blur(50px);
+    opacity: 0;
+    transition: opacity 500ms;
+    pointer-events: none;
+    background: conic-gradient(from 180deg at 50% 50%, rgba(242,98,181,0) 0%, rgba(95,197,255,0.4) 15%, rgba(255,172,137,0.4) 30%, rgba(129,85,255,0.4) 45%, rgba(120,157,255,0.4) 60%, rgba(159,115,241,0.4) 75%, rgba(242,98,181,0) 100%);
+  }
+  
+  .value-card-vertical:hover::before {
+    opacity: 0.6;
+  }
+  
+  /* Progress circle */
+  .progress-circle {
+    @apply relative w-[120px] h-[120px];
+  }
+  
+  .progress-circle-svg {
+    @apply w-full h-full -rotate-90;
+  }
+  
+  .progress-circle-value {
+    @apply absolute inset-0 flex items-center justify-center;
+  }
+  
+  .progress-value-text {
+    @apply font-inter font-semibold text-[32px] text-white;
+  }
+  
+  /* Icon containers */
+  .icon-container-lg {
+    @apply w-16 h-16 flex items-center justify-center;
+    background: linear-gradient(to bottom right, #703BF7, #9D6CFF);
+  }
+  
+  .icon-container-md {
+    @apply w-12 h-12 flex items-center justify-center mb-4;
+    background: linear-gradient(to bottom right, #FFB84D, #FF2D92);
+  }
+  
+  /* Typography variants for value cards */
+  .value-label {
+    @apply font-urbanist font-medium text-sm text-white/60 text-center;
+  }
+  
+  .value-metric-label {
+    @apply font-urbanist font-medium text-sm text-white/80 mb-3;
+  }
+  
+  .value-hero-number {
+    @apply font-inter font-bold text-[72px] leading-[1] text-white mb-2;
+  }
+  
+  .value-hero-description {
+    @apply font-urbanist font-medium text-lg text-white/90;
+  }
+  
+  .value-hero-footer {
+    @apply mt-8;
+  }
+  
+  .value-hero-badge {
+    @apply bg-white/10 backdrop-blur-sm border border-white/20 p-4;
+  }
+  
+  .value-hero-badge-text {
+    @apply font-urbanist font-medium text-sm text-white/90;
+  }
+  
+  .value-feature-title {
+    @apply font-inter font-bold text-[32px] leading-[1.2] mb-3;
+  }
+  
+  .value-feature-subtitle {
+    @apply font-urbanist font-medium text-sm text-white/50;
+  }
+  
+  .value-stat-large {
+    @apply font-inter font-bold text-[48px] bg-clip-text text-transparent;
+    background-image: linear-gradient(to right, #703BF7, #9D6CFF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .value-category {
+    @apply font-urbanist font-medium text-sm text-white/50 mb-2;
+  }
+  
+  .value-title {
+    @apply font-inter font-bold text-[24px] text-white mb-2;
+  }
+  
+  .value-description {
+    @apply font-urbanist font-normal text-sm text-white/60;
+  }
+  
+  .value-feature-heading {
+    @apply font-inter font-semibold text-[18px] text-white mb-2;
+  }
+  
+  /* Gradient text utilities */
+  .gradient-text-orange-pink {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(to right, #FFB84D, #FF2D92);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .gradient-text-pink-purple {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(to right, #FF2D92, #8E2DE2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  /* Column span utilities for responsive grid */
+  .value-card-2col {
+    @apply md:col-span-2 lg:col-span-2;
+  }
+  
+  .value-card-3col {
+    @apply md:col-span-2 lg:col-span-3;
+  }
+}

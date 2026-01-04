@@ -8,7 +8,7 @@ import About from './pages/About'
 
 function App() {
   return (
-    <Router>
+    <Router basename="/Ridelytics-website">
       <div className="min-h-screen bg-[#141414] text-white">
         <Routes>
           <Route path="/" element={
